@@ -1,0 +1,112 @@
+<html style="
+    width: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  ">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Hello world!</title>
+</head>
+<style>
+  * {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+</style>
+
+<body>
+  <div>
+    <div style="
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 0.5rem;
+          margin-top: 1rem;
+        ">
+      <h3 style="
+            line-height: 1.5rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            padding-bottom: 0.75rem;
+          ">
+        Menu
+      </h3>
+      <div style="display: flex; justify-content: space-between">
+        <p style="font-size: base; color: black; text-transform: capitalize">
+          Commande N° {{id}}
+        </p>
+      </div>
+      <div style="display: flex; justify-content: space-between">
+        <p style="font-size: base; color: black; text-transform: capitalize">
+          {{type}}
+        </p>
+      </div>
+      <div style="display: flex; justify-content: space-between">
+        <p style="font-size: base; color: black; text-transform: capitalize">
+          {{tab}}
+        </p>
+      </div>
+      <table style="
+            border-collapse: collapse;
+            border: 1px solid black;
+            padding: 0.75rem 1rem;
+            width: 100%;
+          ">
+        <thead style="display: flex; width: 100%">
+          <tr>
+            <th style="border: 1px solid black; padding: 0 1rem; flex: 1">
+              <p style="text-align: center">Qté</p>
+            </th>
+            <th style="border: 1px solid black; padding: 0 1rem; flex: 1">
+              <p style="text-align: center">Produit</p>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          {{#each commandes}}
+          <tr>
+            <td style="border: 1px solid black">
+              <p style="
+                    text-align: center;
+                    font-size: 1rem;
+
+                    text-transform: capitalize;
+                  ">
+                {{this.quantity}}
+              </p>
+            </td>
+            <td style="border: 1px solid black">
+              <p style="
+                    text-align: center;
+                    font-size: 1rem;
+
+                    text-transform: capitalize;
+                  ">
+                {{this.name}}
+              </p>
+
+              <p style="
+                    text-align: center;
+                    font-size: 1rem;
+
+                    text-transform: capitalize;
+                  ">
+                {{this.note}}
+              </p>
+              <p style="
+                    text-align: center;
+                    font-size: 1rem;
+
+                    text-transform: capitalize;
+                  ">
+                {{this.custom}}
+              </p>
+            </td>
+          </tr>
+          {{/each}}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</body>
+
+</html>

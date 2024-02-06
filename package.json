@@ -1,0 +1,15 @@
+{
+  "name": "test-pdf",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "pdf-creator-node": "^2.3.5",
+    "pdf-to-printer": "^5.6.0"
+  }
+}
